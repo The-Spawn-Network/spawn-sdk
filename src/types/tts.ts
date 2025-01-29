@@ -68,7 +68,7 @@ export interface Microsoft_tts_provider {
 
     /**
      * The voice_id from the list of available voices.
-     * For full list of voice_ids: https://docs.d-id.com/reference/microsoft-azure
+     * For full list of voice_ids: https://docs.thespawnnetwork.com/reference/microsoft-azure
      * @example "en-US-JennyNeural"
      * @default en-US-JennyNeural
      */
@@ -98,7 +98,7 @@ export interface Amazon_tts_provider {
 
     /**
      * The voice_id from the list of available voices.
-     * For full list of voice_ids: https://docs.d-id.com/reference/text-to-speech-providers
+     * For full list of voice_ids: https://docs.thespawnnetwork.com/reference/text-to-speech-providers
      * @example "Joanna"
      */
     voice_id: string;

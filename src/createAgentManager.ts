@@ -22,7 +22,7 @@ import { getRandom } from './auth/getAuthHeader';
 import { createSocketManager, SocketManager } from './connectToSocket';
 import { PLAYGROUND_HEADER } from './consts';
 import { createStreamingManager, StreamingManager } from './createStreamingManager';
-import { didApiUrl, didSocketApiUrl, mixpanelKey } from './environment';
+import { spawnApiUrl, spawnSocketApiUrl, mixpanelKey } from './environment';
 import { Analytics, initializeAnalytics } from './services/mixpanel';
 import { getAnaliticsInfo, getStreamAnalyticsProps } from './utils/analytics';
 
@@ -270,8 +270,8 @@ export async function createAgentManager(agent: string, options: AgentManagerOpt
         chatMode: options.mode || ChatMode.Functional,
     };
 
-    const baseURL = options.baseURL || didApiUrl;
-    const wsURL = options.wsURL || didSocketApiUrl;
+    const baseURL = options.baseURL || spawnApiUrl;
+    const wsURL = options.wsURL || spawnSocketApiUrl;
     const mxKey = options.mixpanelKey || mixpanelKey;
 
     const agentsApi = createAgentsApi(options.auth, baseURL, options.callbacks.onError);
@@ -288,7 +288,7 @@ export async function createAgentManager(agent: string, options: AgentManagerOpt
         isEnabled: options.enableAnalitics,
         distinctId: options.distinctId,
     });
-    analytics.track('agent-sdk', { event: 'loaded', ...getAnaliticsInfo(agentInstance) });
+    analytics.track('spawn-sdk', { event: 'loaded', ...getAnaliticsInfo(agentInstance) });
 
     const socketManagerCallbacks: { onMessage: ChatProgressCallback } = {
         onMessage: (event, data): void => {
@@ -660,7 +660,7 @@ export async function createAgentManager(agent: string, options: AgentManagerOpt
 }
 
 export function getAgent(agentId: string, auth: Auth, baseURL?: string): Promise<Agent> {
-    const { getById } = createAgentsApi(auth, baseURL || didApiUrl);
+    const { getById } = createAgentsApi(auth, baseURL || spawnApiUrl);
 
     return getById(agentId);
 }

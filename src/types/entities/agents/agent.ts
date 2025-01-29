@@ -13,14 +13,14 @@ export enum UserPlan {
 }
 
 export enum PlanGroup {
-    TRIAL = 'deid-trial',
-    PRO = 'deid-pro',
-    ENTERPRISE = 'deid-enterprise',
-    LITE = 'deid-lite',
-    ADVANCED = 'deid-advanced',
-    BUILD = 'deid-api-build',
-    LAUNCH = 'deid-api-launch',
-    SCALE = 'deid-api-scale',
+    TRIAL = 'spawn-trial',
+    PRO = 'spawn-pro',
+    ENTERPRISE = 'spawn-enterprise',
+    LITE = 'spawn-lite',
+    ADVANCED = 'spawn-advanced',
+    BUILD = 'spawn-api-build',
+    LAUNCH = 'spawn-api-launch',
+    SCALE = 'spawn-api-scale',
 }
 
 export enum AgentStatus {

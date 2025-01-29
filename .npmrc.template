@@ -1,4 +1,4 @@
-@de-id:registry=https://npm.pkg.github.com
+@thespawnnetwork:registry=https://npm.pkg.github.com
 link-workspace-packages=true
 shamefully-hoist=true
 arch=x64

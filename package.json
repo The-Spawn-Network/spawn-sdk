@@ -1,20 +1,20 @@
 {
-    "name": "@d-id/client-sdk",
+    "name": "@thespawnnetwork/client-sdk",
     "private": false,
     "version": "1.0.19-beta.137",
     "type": "module",
-    "description": "d-id client sdk",
+    "description": "thespawnnetwork client sdk",
     "repository": {
         "type": "git",
-        "url": "https://github.com/de-id/agents-sdk"
+        "url": "https://github.com/thespawnnetwork/spawn-sdk"
     },
     "keywords": [
-        "d-id",
+        "thespawnnetwork",
         "sdk",
         "client-sdk"
     ],
     "license": "MIT",
-    "author": "d-id",
+    "author": "thespawnnetwork",
     "files": [
         "dist/*"
     ],

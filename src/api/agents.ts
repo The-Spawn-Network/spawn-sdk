@@ -9,12 +9,12 @@ import {
     RatingPayload,
     STTTokenResponse,
 } from '$/types/index';
-import { didApiUrl } from '../environment';
+import { spawnApiUrl } from '../environment';
 import { createClient } from './getClient';
 
 export function createAgentsApi(
     auth: Auth,
-    host: string = didApiUrl,
+    host: string = spawnApiUrl,
     onError?: (error: Error, errorData: object) => void
 ) {
     const client = createClient(auth, `${host}/agents`, onError);

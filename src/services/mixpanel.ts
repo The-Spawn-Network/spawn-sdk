@@ -34,7 +34,7 @@ interface MixpanelEvents {
 let mixpanelEvents: MixpanelEvents = {};
 
 export function initializeAnalytics(config: AnalyticsOptions): Analytics {
-    const source = window?.hasOwnProperty('DID_AGENTS_API') ? 'agents-ui' : 'agents-sdk';
+    const source = window?.hasOwnProperty('SPAWN_AGENTS_API') ? 'agents-ui' : 'spawn-sdk';
     const presenter = config.agent.presenter;
 
     const analyticProps = {

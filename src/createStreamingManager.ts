@@ -9,7 +9,7 @@ import {
     StreamingState,
     VideoType,
 } from '$/types/index';
-import { didApiUrl } from './environment';
+import { spawnApiUrl } from './environment';
 
 let _debug = false;
 const log = (message: string, extra?: any) => _debug && console.log(message, extra);
@@ -106,7 +106,7 @@ function pollStats(
 export async function createStreamingManager<T extends CreateStreamOptions>(
     agentId: string,
     agent: T,
-    { debug = false, callbacks, auth, baseURL = didApiUrl, warmup }: StreamingManagerOptions
+    { debug = false, callbacks, auth, baseURL = spawnApiUrl, warmup }: StreamingManagerOptions
 ) {
     _debug = debug;
     let srcObject: MediaStream | null = null;

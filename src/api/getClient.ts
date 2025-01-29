@@ -1,8 +1,8 @@
 import { Auth } from '$/types/auth';
 import { getAuthHeader } from '../auth/getAuthHeader';
-import { didApiUrl } from '../environment';
+import { spawnApiUrl } from '../environment';
 
-export function createClient(auth: Auth, host = didApiUrl, onError?: (error: Error, errorData: object) => void) {
+export function createClient(auth: Auth, host = spawnApiUrl, onError?: (error: Error, errorData: object) => void) {
     const client = async <T>(url: string, options?: RequestInit) => {
         const request = await fetch(host + (url?.startsWith('/') ? url : `/${url}`), {
             ...options,

@@ -3,7 +3,7 @@ import { useRef, useState } from 'preact/hooks';
 import { createAgentManager } from '$/createAgentManager';
 import { AgentManager, Auth, ChatMode, ConnectionState, Message, StreamingState } from '$/types';
 import './app.css';
-import { agentId, didApiUrl, didSocketApiUrl } from './environment';
+import { agentId, spawnApiUrl, spawnSocketApiUrl } from './environment';
 
 const auth: Auth = { type: 'key', clientKey: import.meta.env.VITE_CLIENT_KEY };
 export function App() {
@@ -45,10 +45,10 @@ export function App() {
                         videoRef.current.srcObject = value;
                     },
                 },
-                baseURL: didApiUrl,
+                baseURL: spawnApiUrl,
                 mode,
                 auth,
-                wsURL: didSocketApiUrl,
+                wsURL: spawnSocketApiUrl,
                 enableAnalitics: false,
                 distinctId: 'testDistinctIdToSDKTest',
                 streamOptions: {

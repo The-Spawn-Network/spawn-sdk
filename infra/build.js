@@ -38,7 +38,7 @@ try {
     const dist = path.resolve(root, './dist');
     const packageJson = path.resolve(root, './package.json');
     const embeddedModules = path.resolve(root, '../agents-ui/node_modules');
-    const embeddedSdk = path.resolve(embeddedModules, './@d-id/client-sdk/dist');
+    const embeddedSdk = path.resolve(embeddedModules, './@thespawnnetwork/client-sdk/dist');
     const embeddedViteCache = path.resolve(embeddedModules, './.vite');
 
     if (!fs.existsSync(dist)) {

@@ -3,11 +3,11 @@ import { Auth } from '$/types/auth';
 export const getRandom = () => Math.random().toString(16).slice(2);
 
 export function getExternalId() {
-    let key = window.localStorage.getItem('did_external_key_id');
+    let key = window.localStorage.getItem('spawn_external_key_id');
 
     if (!key) {
         key = Math.random().toString(16).slice(2);
-        window.localStorage.setItem('did_external_key_id', key);
+        window.localStorage.setItem('spawn_external_key_id', key);
     }
 
     return key;

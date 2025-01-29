@@ -7,7 +7,7 @@
     "arrowParens": "avoid",
     "endOfLine": "auto",
     "bracketSameLine": true,
-    "importOrder": ["^@d-id/tests$", "^@d-id/(.*)$", "^@/(.*)$", "^[./]"],
+    "importOrder": ["^@thespawnnetwork/tests$", "^@thespawnnetwork/(.*)$", "^@/(.*)$", "^[./]"],
     "importOrderSeparation": true,
     "importOrderParserPlugins": ["typescript", "decorators-legacy"],
     "plugins": ["prettier-plugin-organize-imports"],

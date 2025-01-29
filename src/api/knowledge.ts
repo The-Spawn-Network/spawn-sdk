@@ -7,10 +7,10 @@ import {
     QueryResult,
     RecordData,
 } from '$/types/index';
-import { didApiUrl } from '../environment';
+import { spawnApiUrl } from '../environment';
 import { createClient } from './getClient';
 
-export function createKnowledgeApi(auth: Auth, host = didApiUrl, onError?: (error: Error, errorData: object) => void) {
+export function createKnowledgeApi(auth: Auth, host = spawnApiUrl, onError?: (error: Error, errorData: object) => void) {
     const client = createClient(auth, `${host}/knowledge`, onError);
 
     return {
